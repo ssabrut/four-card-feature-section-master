@@ -1,0 +1,38 @@
+// color
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+
+// neutral
+$veryDarkBlue: hsl(234, 12%, 34%);
+$grayishBlue: hsl(229, 6%, 66%);
+$veryLightGray: hsl(0, 0%, 98%);
+
+// font weight
+$fontweight: (
+  "thin": 200,
+  "medium": 400,
+  "bold": 600,
+);
+
+// content mixin
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+// media query
+@mixin mobile {
+  @media screen and (max-width: 89.9375rem) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 90rem) {
+    @content;
+  }
+}

@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  font-size: 15px;
+  background-color: #fafafa;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 6rem;
+}
+
+@media screen and (max-width: 89.9375rem) {
+  .header h2 {
+    color: #4c4e61;
+    text-align: center;
+    font-weight: 200;
+  }
+  .header p {
+    color: #a3a5ae;
+    margin-top: 1.5rem;
+    text-align: center;
+    width: 75%;
+  }
+}
+
+.features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 4.625rem;
+}
+
+.features .info__panel {
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.features .info__panel--1 {
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+.features .info__panel--1 .line--1,
+.features .info__panel--1 .line--2,
+.features .info__panel--1 .line--3,
+.features .info__panel--1 .line--4 {
+  position: absolute;
+  width: 100%;
+  height: 0.35rem;
+  top: 0%;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.features .info__panel--1 .line--1 {
+  background-color: #45d3d3;
+}
+
+.features .info__panel--1 .description {
+  position: relative;
+  top: 15%;
+  left: 7%;
+}
+
+.features .info__panel--1 .description h2 {
+  color: #4c4e61;
+  margin-bottom: 0.5rem;
+}
+
+.features .info__panel--1 .description p {
+  color: #a3a5ae;
+}
+
+.features .info__panel--1 img {
+  position: absolute;
+  width: 3.75rem;
+  height: 3.75rem;
+  bottom: 10%;
+  right: 5%;
+}
+
+@media screen and (max-width: 89.9375rem) {
+  .features .info__panel--1 {
+    width: 20rem;
+    height: 14.375rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

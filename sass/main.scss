@@ -1,0 +1,80 @@
+@import "./global";
+@import "./variables";
+
+.header {
+  @include flexCenter(column);
+  margin-top: 6rem;
+
+  @include mobile {
+    h2 {
+      color: $veryDarkBlue;
+      text-align: center;
+      font-weight: map-get($fontweight, thin);
+    }
+
+    p {
+      color: $grayishBlue;
+      margin-top: 1.5rem;
+      text-align: center;
+      width: 75%;
+    }
+  }
+}
+
+.features {
+  @include flexCenter(column);
+  margin-top: 4.625rem;
+
+  .info__panel {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+
+    &--1 {
+      background-color: white;
+      border-radius: 0.5rem;
+
+      .line--1,
+      .line--2,
+      .line--3,
+      .line--4 {
+        position: absolute;
+        width: 100%;
+        height: 0.35rem;
+        top: 0%;
+        border-radius: 0.5rem 0.5rem 0 0;
+      }
+
+      .line--1 {
+        background-color: $cyan;
+      }
+
+      .description {
+        position: relative;
+        top: 15%;
+        left: 7%;
+
+        h2 {
+          color: $veryDarkBlue;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          color: $grayishBlue;
+        }
+      }
+
+      img {
+        position: absolute;
+        width: 3.75rem;
+        height: 3.75rem;
+        bottom: 10%;
+        right: 5%;
+      }
+      @include mobile {
+        width: 20rem;
+        height: 14.375rem;
+      }
+    }
+  }
+}
