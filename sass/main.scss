@@ -2,37 +2,61 @@
 @import "./variables";
 
 .header {
-  @include flexCenter(column);
+  @include flexCenter;
+  flex-direction: column;
   margin-top: 6rem;
 
-  @include mobile {
-    h2 {
-      color: $veryDarkBlue;
-      text-align: center;
-      font-weight: map-get($fontweight, thin);
-    }
+  h2 {
+    text-align: center;
+    font-weight: map-get($fontweight, thin);
+    color: $veryDarkBlue;
+  }
 
+  p {
+    color: $grayishBlue;
+    margin-top: 1.5rem;
+    text-align: center;
+    width: 35%;
+  }
+
+  @include mobile {
     p {
-      color: $grayishBlue;
-      margin-top: 1.5rem;
-      text-align: center;
       width: 75%;
     }
   }
 }
 
 .features {
-  @include flexCenter(column);
-  margin-top: 4.625rem;
+  @include flexCenter;
+
+  @include mobile {
+    margin-top: 4.625rem;
+    margin-bottom: 4.875rem;
+  }
 
   .info__panel {
-    position: relative;
-    overflow: hidden;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    @include flexCenter;
+    margin-top: 4.375rem;
 
-    &--1 {
+    @include mobile {
+      @include flexCenter;
+      flex-direction: column;
+    }
+
+    &--1,
+    &--2,
+    &--3,
+    &--4 {
+      width: 22.5rem;
+      height: 16.25rem;
+      position: relative;
       background-color: white;
       border-radius: 0.5rem;
+
+      @include mobile {
+        width: 20rem;
+        height: 14.375rem;
+      }
 
       .line--1,
       .line--2,
@@ -49,8 +73,21 @@
         background-color: $cyan;
       }
 
+      .line--2 {
+        background-color: $red;
+      }
+
+      .line--3 {
+        background-color: $orange;
+      }
+
+      .line--4 {
+        background-color: $blue;
+      }
+
       .description {
         position: relative;
+        width: 85%;
         top: 15%;
         left: 7%;
 
@@ -71,10 +108,27 @@
         bottom: 10%;
         right: 5%;
       }
+    }
+
+    &--1 {
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    &--2,
+    &--3,
+    &--4 {
       @include mobile {
-        width: 20rem;
-        height: 14.375rem;
+        margin-top: 1.75rem;
       }
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 60vh;
+      margin: 0 2rem;
     }
   }
 }

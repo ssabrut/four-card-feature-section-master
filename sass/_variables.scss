@@ -17,11 +17,10 @@ $fontweight: (
 );
 
 // content mixin
-@mixin flexCenter($direction) {
+@mixin flexCenter {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: $direction;
 }
 
 // media query
